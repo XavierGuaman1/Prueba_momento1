@@ -1,0 +1,22 @@
+server:
+  port: 8080
+  error:
+    include-message: always
+#Configuracion de spring
+spring:
+  #Configuracion de migracion
+  flyway:
+    enabled: true
+    baselineVersion: 1
+    locations:
+      classpath: db/migration
+    sqlMigrationSuffixes: .sql
+    baselineOnMigrate: true
+    sqlMigrationPrefix: V
+    schemas: public
+
+  datasource:
+    url: jdbc:postgresql://suleiman.db.elephantsql.com/bgwaqger?socketTimeout=3
+    username: bgwaqger
+    password: dVjjraTrPk5kBIodZRf1wgXXpt5aDtCL
+    driverClassName: org.postgresql.Driver
